@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page heading -->
+    <header class="page-header">
+        <h1>My Budget Tracker</h1>
+        <p>Track your income and expenses in one place.</p>
+    </header>
+
+    <main>
+        <!-- Add Expense section -->
+        <section id="add-expense" class="expense-form">
+            <h2>Add Expense</h2>
+
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name"
+                   placeholder="e.g. Groceries">
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount"
+                   placeholder="Enter amount">
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="">Select a category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="button">Add Expense</button>
+        </section>
+
+        <!-- Your Expenses section -->
+        <section id="your-expenses" class="expenses-list">
+            <h2>Your Expenses</h2>
+            <p>No expenses yet. Your expenses will appear here.</p>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget & Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+            alt="Budget tracker logo"
+            width="60"
+        >
+        <div>
+            <h1>Personal Budget & Expense Tracker</h1>
+            <p>Track your spending. Manage your money wisely.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="add-expense-section">
+            <h2>Add New Expense</h2>
+
+            <form id="expense-form">
+                <div class="form-group">
+                    <label for="expense-name">Expense Name:</label>
+                    <input
+                        type="text"
+                        id="expense-name"
+                        name="expense-name"
+                        placeholder="e.g. Groceries"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-amount">Amount (KSh):</label>
+                    <input
+                        type="number"
+                        id="expense-amount"
+                        name="expense-amount"
+                        placeholder="e.g. 500"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-category">Category:</label>
+                    <select
+                        id="expense-category"
+                        name="expense-category"
+                        required
+                    >
+                        <option value="">Select a category</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-date">Date:</label>
+                    <input
+                        type="date"
+                        id="expense-date"
+                        name="expense-date"
+                        required
+                    >
+                </div>
+
+                <button type="button" id="add-expense-button">
+                    Add Expense
+                </button>
+            </form>
+        </section>
+
+        <section class="expenses-section">
+            <h2>My Expenses</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount (KSh)</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Groceries</td>
+                            <td>2,500.00</td>
+                            <td>Food</td>
+                            <td>2026-10-15</td>
+                        </tr>
+                        <tr>
+                            <td>Bus Fare</td>
+                            <td>300.00</td>
+                            <td>Transport</td>
+                            <td>2026-10-16</td>
+                        </tr>
+                        <tr>
+                            <td>House Rent</td>
+                            <td>8,000.00</td>
+                            <td>Rent</td>
+                            <td>2026-10-17</td>
+                        </tr>
+                        <tr>
+                            <td>Movie Ticket</td>
+                            <td>700.00</td>
+                            <td>Entertainment</td>
+                            <td>2026-10-18</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Airtime</td>
+                            <td>200.00</td>
+                            <td>Other</td>
+                            <td>2026-10-19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="help-section">
+            <details>
+                <summary>How to Use This Tracker</summary>
+                <p>
+                    Enter the expense name, amount, category, and date
+                    in the form. Click the Add Expense button when you
+                    are ready. In this week's version, the button is a
+                    placeholder and does not add new rows yet.
+                </p>
+                <p>
+                    The table displays sample expenses to demonstrate
+                    how your spending records will look.
+                </p>
+            </details>
+        </section>
+
+        <section class="video-section">
+            <h2>Learn Budgeting Tips</h2>
+            <p>Watch a budgeting video to learn how to manage expenses.</p>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/2V3CfD8TPac"
+                    title="Budgeting tips video"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Personal Budget & Expense Tracker</p>
+        <p>Week 2 HTML and CSS Project</p>
+    </footer>
+
+</body>
+</html>
